@@ -1,6 +1,6 @@
 {
-    "name": "new_flutter",
-    "short_name": "new_flutter",
+    "name": "bpibs_project",
+    "short_name": "bpibs_project",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
