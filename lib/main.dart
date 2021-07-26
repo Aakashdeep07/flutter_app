@@ -9,7 +9,7 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(title: 'Welcome to BPIBS Admin', home: HomePage());
-    // title: 'Welcome to BPIBS Admin', home: AuthService().handleAuth());
+    return MaterialApp(
+        title: 'Welcome to BPIBS Admin', home: AuthService().handleAuth());
   }
 }

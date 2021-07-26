@@ -31,6 +31,8 @@ class _LoginPageState extends State<LoginPage> {
             child: new Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
+                Image.asset('assets/company_logo.png',
+                    width: 300, height: 300, fit: BoxFit.fill),
                 Form(
                   key: _formKey,
                   child: Column(
@@ -53,16 +55,19 @@ class _LoginPageState extends State<LoginPage> {
                         validator: (value) =>
                             value!.isEmpty ? 'Password cannot be blank' : null,
                       ),
-                      Container(
-                        padding: const EdgeInsets.symmetric(vertical: 16.0),
-                        alignment: Alignment.center,
-                        child: ElevatedButton(
-                          onPressed: () async {
-                            // AuthService().signIn(email, password);
-                          },
-                          child: const Text('Submit'),
-                        ),
-                      ),
+                      SizedBox(
+                          width: double.infinity, // <-- match_parent
+                          child: ElevatedButton(
+                            onPressed: () async {
+                              AuthService().signIn(email, password);
+                            },
+                            style: ElevatedButton.styleFrom(
+                              primary: Colors.deepPurpleAccent,
+                              elevation: 5,
+                              padding: const EdgeInsets.all(30),
+                            ),
+                            child: const Text('Submit'),
+                          )),
                     ],
                   ),
                 ),
